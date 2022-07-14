@@ -1,13 +1,13 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
+// const router = express.Router();
 const {
-  getAllwords,
+  getAllword,
   postWord,
   putWord,
   deleteWord,
 } = require("../../controllers/word.controller");
 
-router.get("/", getAllwords);
+router.get("/", getAllword);
 
 router.post("/", postWord);
 
