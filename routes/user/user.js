@@ -1,19 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const {getAllUser} = require('../../controllers/user.controller');
+const { getAllUser, postUser, putUser, deleteUser } = require("../../controllers/user.controller");
 
-router.get('/',getAllUser);
+router.get("/", getAllUser);
 
-router.post('/', (req, res)=>{
-    res.status(200).json({reponse:"this method add a user "})
-});
+router.post("/", postUser);
 
-router.put('/', (req, res)=>{
-    res.status(200).json({reponse:"this method update a user"})
-});
+router.put("/", putUser);
 
-router.delete('/', (req, res)=>{
-    res.status(200).json({reponse:"this method delete a user"})
-});
+router.delete("/", deleteUser);
+
 
 module.exports = router;
