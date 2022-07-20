@@ -8,7 +8,7 @@ const {
 } = require("../../controllers/word.controller");
 
 router.get("/", getAllword);
-
+//router.get("/", (req, res)=>{})
 router.post("/", postWord);
 
 router.put("/", putWord);
