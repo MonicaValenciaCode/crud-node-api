@@ -1,10 +1,13 @@
 const {connection} = require('./config');
 
 const getWords  = () => {
-    const query  =  `SELECT w.id_word, w.spanish, w.english, p.spanish as pSpanish, p.english as pEnglish FROM word w 
-                      INNER JOIN phrase p 
-                      WHERE w.idphrase = p.id_phrase
-                    `;
+    // const query  =  `SELECT w.id_word, w.spanish, w.english, p.spanish as pSpanish, p.english as pEnglish FROM word w 
+    //                   INNER JOIN phrase p 
+    //                   WHERE w.idphrase = p.id_phrase
+    //                 `;
+
+    const query = 'SELECT * FROM word';
+
     return new Promise((resolve, reject)=>{
         //sea bueno (resolve)->data
         //sea malo  (reject)->error
